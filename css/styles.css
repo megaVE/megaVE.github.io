@@ -233,6 +233,10 @@ footer{
     #content img{
         max-width: 80%;
     }
+
+    #content abbr{
+        text-decoration: none;
+    }
 }
 
 /* Lists */
