@@ -1,0 +1,356 @@
+/* Importing Fonts */
+
+@font-face{
+    font-family: josefin-sans;
+    src: url(../fonts/JosefinSans/JosefinSans-VariableFont_wght.ttf);
+}
+
+@font-face{
+    font-family: roboto;
+    src: url(../fonts/Roboto/Roboto-Regular.ttf)
+}
+
+@font-face{
+    font-family: roboto-italic;
+    src: url(../fonts/Roboto/Roboto-Italic.ttf)
+}
+
+@font-face{
+    font-family: roboto-bold;
+    src: url(../fonts/Roboto/Roboto-Bold.ttf)
+}
+
+/* Initial Animation */
+
+@keyframes initial-sidebar{
+    from{width: 0px;}
+    to{width: 350px;}
+}
+
+@keyframes initial-sidebar-content{
+    0%{opacity: 0.0;}
+    50%{opacity: 0.0;}
+    100%{opacity: 1.0;}
+} 
+
+/* General CSS */
+
+*{
+    color: lightgreen;
+    background-color: black;
+    font-family: roboto;
+    box-sizing: border-box;
+}
+
+/* Sidebar */
+
+#sidebar{
+    position: fixed;
+    height: 100%;
+    width: 350px;
+    animation-name: initial-sidebar;
+    animation-duration: 1s;
+    background-image: linear-gradient(to right, black, 90%, purple);
+    border-right: solid 10px purple;
+    text-align: center;
+}
+
+#sidebar-icon img {
+    margin: 50px auto;
+    margin-bottom: 30px;
+    width: 45%;
+    display:block;
+    border: double purple 10px;
+    border-radius: 5px;
+    background-color: darkslategray;
+}
+
+#sidebar h2, #sidebar nav, #sidebar a, #sidebar a:hover, #sidebar figure {
+    background-color: rgba(0,0,0,0);
+}
+
+#sidebar h2{
+    margin: 15px 0;
+    padding: 5px 0;
+    font-family: josefin-sans;
+    font-size: 36px;
+    animation-name: initial-sidebar-content;
+    animation-duration: 2s;
+}
+
+#sidebar nav{
+    display: flex;
+    flex-direction: column;
+    animation-name: initial-sidebar-content;
+    animation-duration: 3s;
+}
+
+#sidebar a{
+    margin: 20px 0;
+    padding: 5px 0;
+    text-decoration: none;
+    font-family: roboto;
+    font-size: 32px;
+}
+
+#sidebar a:hover {
+    font-family: roboto-bold;
+    font-size: 34px;
+    color: green;
+}
+
+@media(max-width: 1000px){
+    #sidebar{
+        display: none;
+    }
+}
+
+/* Content */
+
+header{
+    padding: 30px 0;
+}
+
+footer{
+    padding: 15px 0;
+}
+
+#content{
+    margin-left: 350px;
+    height: 700px;
+}
+
+#content section{
+    margin: 50px 15px;
+    padding: 0 5px;
+    border: solid goldenrod;
+}
+
+#content #content-fim{
+    margin-bottom: 0;
+}
+
+#content h1, #content h2, #content h3{
+    padding: 10px 0;
+    font-family: josefin-sans;
+    text-align: center;
+    border: solid blueviolet;
+}
+
+#content h1{
+    margin: 0 10px;
+    font-size: 96px;
+    font-weight: bold;
+}
+
+#content h2{
+    margin: 20px 0;
+    font-size: 72px;
+}
+
+#content h3{
+    padding: 10px;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: justify;
+}
+
+#content p, #content b, #content strong, #content a, #content i, #content abbr, #content li{
+    font-family: roboto;
+    padding: 5px 0;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+#content p, #content li{
+    border: solid purple;
+    margin: 5px 0;
+    padding: 5px;
+}
+
+#content li{
+    margin-left: 20px;
+}
+
+#content b, #content strong, #content a{
+    font-family: roboto-bold;
+    font-size: 18px;
+}
+
+#content i, #content abbr{
+    font-family: roboto-italic;
+    font-size: 18px;
+}
+
+#content a{
+    text-decoration: none;
+    color: green;
+}
+
+#content figure{
+    display: flex;
+    justify-content: center;
+}
+
+#content img{
+    display: block;
+    padding: 10px;
+    max-width: 95%;
+    max-height: 600px;
+    border: solid greenyellow;
+    margin: 20px;
+}
+
+#content .side-note{
+    font-size: 16px;
+}
+
+#content footer p{
+    margin: 0 15px;
+    text-align: center;
+}
+
+@media(max-width: 1000px){
+    #content{
+        margin-left: 0;
+    }
+}
+
+@media(max-width: 500px){
+    #content h1{
+        font-size: 72px;
+    }
+
+    #content h2{
+        font-size: 60px;
+    }
+
+    #content h3{
+        text-align: center;
+    }
+
+    #content img{
+        max-width: 80%;
+    }
+}
+
+/* Lists */
+
+/* Image List */
+
+.img-list{
+    margin: 20px 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    grid-gap: 20px;
+    justify-content: center;
+}
+
+.img-list figure{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.img-list figure img{
+    width: 300px;
+    border-radius: 20px;
+}
+
+.img-list figure figcaption{
+    margin: 5px 0;
+    width: 330px;
+    font-family: roboto-bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+#game-list figure{
+    height: 219px;
+}
+
+@media(max-width: 1000px){
+    .img-list figure img {
+        width: 250px;
+    }
+}
+
+@media(max-width: 500px){
+    .img-list figure figcaption{
+        width: auto;
+    }
+    
+}
+
+/* Image-Text List */
+
+.img-text-block{
+    margin-left: 10px;
+    display: flex;
+}
+
+.img-text-block figure{
+    flex-basis: 170px;
+    min-width: 170px;
+    height: auto;
+    align-items: center;
+}
+
+.img-text-block figure img{
+    display: block;
+    width: 150px;
+    height: 150px;
+}
+
+.img-text-block li{
+    flex-grow: 1;
+    width: 100%;
+}
+
+@media(max-width: 500px){
+    .img-text-block figure{
+        display: none !important;
+    }
+
+    .img-text-block{
+        list-style-type: disc;
+    }
+
+    .img-text-block li{
+        width: 90%;
+    }
+}
+
+/* Social List */
+
+#social-list{
+    list-style-type: none;
+}
+
+#social-list{
+    margin-left: 80px;
+}
+
+#social-list li{
+    text-align: left;
+    line-height: 2;
+    font-size: 24px;
+}
+
+@media(max-width: 500px){
+    #social-list{
+        margin-left: 15px;
+    }
+
+    #social-list li{
+        font-size: 16px;
+    }
+
+    #social-list a{
+        font-size: 16px;
+    }
+}
+
+/* Others */
+

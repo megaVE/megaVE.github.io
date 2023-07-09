@@ -1,0 +1,3 @@
+Olá, meu nome é Vinícius Eduardo, tenho (em 2023) 20 anos e sou estudante do curso Bacharelado em Ciência da Computação na Universidade Federal de Alfenas, UNIFAL.
+Este é um site pessoal feito por mim via HTML e CSS, no qual tenho intenção de contar um pouco mais sobre mim enquanto indivíduo, bem como demonstar meus conhecimentos e habilidades com a ferramenta.
+
